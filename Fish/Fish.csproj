@@ -6,4 +6,52 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Helper\" />
+    <None Remove="Microsoft.AspNetCore.Authentication.Negotiate" />
+    <None Remove="Microsoft.AspNetCore.Authorization" />
+    <None Remove="AuthenticateBase\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Admin\" />
+    <None Remove="Areas\Admin\Views\" />
+    <None Remove="Areas\Admin\Views\Animal\" />
+    <None Remove="Areas\Admin\Views\Family\" />
+    <None Remove="Areas\Admin\Views\Genus\" />
+    <None Remove="Areas\Admin\Views\Home\" />
+    <None Remove="Areas\Admin\Models\" />
+    <None Remove="Areas\Admin\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="Helper\" />
+    <Folder Include="AuthenticateBase\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Areas\Admin\Views\Animal\" />
+    <Folder Include="Areas\Admin\Views\Family\" />
+    <Folder Include="Areas\Admin\Views\Genus\" />
+    <Folder Include="Areas\Admin\Views\Home\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\" />
+    <Content Remove="Models\_ViewImports.cshtml" />
+    <Content Remove="Models\_ViewStart.cshtml" />
+  </ItemGroup>
 </Project>

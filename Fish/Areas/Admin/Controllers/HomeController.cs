@@ -3,24 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using Fish.Models;
 
 namespace Fish.Controllers;
-
+[Area("Admin")]
+[BasicAuthorize]
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
-
+    // GET: /Home/
     public IActionResult Index()
     {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
+        return View("Index");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

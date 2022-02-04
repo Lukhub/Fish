@@ -1,0 +1,59 @@
+@model IEnumerable<Fish.Models.Animal>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CareLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Temparament)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CareLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Temparament)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genus.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
